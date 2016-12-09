@@ -1,0 +1,9 @@
+package liaa.dct.bor.control;
+
+public class Validator {
+
+	public static boolean validate(String xmlPath){
+		
+		
+	}
+}

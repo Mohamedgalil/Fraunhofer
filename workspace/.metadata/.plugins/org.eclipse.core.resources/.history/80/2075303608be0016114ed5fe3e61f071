@@ -1,0 +1,128 @@
+package liaa.ipa.xml.control.BillOfResources.main;
+
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+
+import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.Diagnostician;
+import org.eclipse.emf.ecore.xmi.XMLResource;
+import org.eclipse.emf.ecore.xmi.impl.XMLResourceFactoryImpl;
+
+import liaa.ipa.xml.control.BillOfResources.BoR;
+import liaa.ipa.xml.control.BillOfResources.ResourceDescriptor;
+import liaa.ipa.xml.control.BillOfResources.borFactory;
+import liaa.ipa.xml.control.BillOfResources.borPackage;
+
+/**
+ * <!-- begin-user-doc --> A sample utility for the '<em><b>bowling</b></em>'
+ * package. <!-- end-user-doc -->
+ * 
+ * @generated
+ */
+public class TestLoad {
+	private static String filePath = "";
+	private static boolean create = true;
+
+	/**
+	 * <!-- begin-user-doc --> Load all the argument file paths or URIs as
+	 * instances of the model. <!-- end-user-doc -->
+	 * 
+	 * @param args
+	 *            the file paths or URIs.
+	 * @generated
+	 */
+	public static void main(String[] args) {
+		// Create a resource set to hold the resources.
+		//
+		ResourceSet resourceSet = new ResourceSetImpl();
+
+		// Register the appropriate resource factory to handle all file
+		// extensions.
+		//
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap()
+				.put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMLResourceFactoryImpl());
+		// Register the package to ensure it is available during loading.
+		//
+		resourceSet.getPackageRegistry().put(borPackage.eNS_URI, borPackage.eINSTANCE);
+
+		// If there are no arguments, emit an appropriate usage message.
+		//
+		if (create) {
+			System.out.println("Enter a list of file paths or URIs that have content like this:");
+			try {
+				Resource resource = resourceSet.createResource(URI.createURI("http:///My.bowling"));
+				((XMLResource) resource).setEncoding("UTF-8");
+
+				BoR root = borFactory.eINSTANCE.createBoR();
+				Resource r1 = borFactory.eINSTANCE.createResource();
+				root.setResources(r1);
+				resource.getContents().add(root);
+				resource.save(System.out, null);
+			} catch (IOException exception) {
+				exception.printStackTrace();
+			}
+		} else {
+			File file = new File(filePath);
+			URI uri = file.isFile() ? URI.createFileURI(file.getAbsolutePath()) : URI.createURI(filePath);
+
+			try {
+				// Demand load resource for this file.
+				//
+				Resource resource = resourceSet.getResource(uri, true);
+				System.out.println("Loaded " + uri);
+
+				// Validate the contents of the loaded resource.
+				//
+				for (EObject eObject : resource.getContents()) {
+					Diagnostic diagnostic = Diagnostician.INSTANCE.validate(eObject);
+					if (diagnostic.getSeverity() != Diagnostic.OK) {
+						printDiagnostic(diagnostic, "");
+					}
+				}
+			} catch (RuntimeException exception) {
+				System.out.println("Problem loading " + uri);
+				exception.printStackTrace();
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc --> Prints diagnostics with indentation. <!--
+	 * end-user-doc -->
+	 * 
+	 * @param diagnostic
+	 *            the diagnostic to print.
+	 * @param indent
+	 *            the indentation for printing.
+	 * @generated
+	 */
+	protected static void printDiagnostic(Diagnostic diagnostic, String indent) {
+		System.out.print(indent);
+		System.out.println(diagnostic.getMessage());
+		for (Diagnostic child : diagnostic.getChildren()) {
+			printDiagnostic(child, indent + "  ");
+		}
+	}
+
+} // BowlingExample

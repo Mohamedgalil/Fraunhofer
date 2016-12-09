@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="liaa.dct.bor.category.import"
+            name="IPA Project">
+      </category>
+      <wizard
+            category="liaa.dct.bor.category.import"
+            class="liaa.dct.bor.gui.wizards.ImportWizard"
+            id="liaa.dct.bor.wizard.import"
+            name="Import">
+      </wizard>
+   </extension>
+
+</plugin>

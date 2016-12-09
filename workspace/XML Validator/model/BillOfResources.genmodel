@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/XML Validator/src" modelPluginID="XML_Validator"
+    modelName="BillOfResources" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.xsd.ecore.importer" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.xsd.ecore.importer">
+    <details key="createMap" value="true"/>
+  </genAnnotations>
+  <foreignModel>file:/C:/Users/rfa-ms/Downloads/Documents/BillOfResources.xsd</foreignModel>
+  <genPackages prefix="bor" basePackage="liaa.ipa.xml.control" resource="XML" disposableProviderFactory="true"
+      fileExtensions="bor" ecorePackage="BillOfResources.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="BillOfResources.ecore#//AttributeType">
+      <genEnumLiterals ecoreEnumLiteral="BillOfResources.ecore#//AttributeType/decimal"/>
+      <genEnumLiterals ecoreEnumLiteral="BillOfResources.ecore#//AttributeType/string"/>
+      <genEnumLiterals ecoreEnumLiteral="BillOfResources.ecore#//AttributeType/integer"/>
+      <genEnumLiterals ecoreEnumLiteral="BillOfResources.ecore#//AttributeType/boolean"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="BillOfResources.ecore#//FormatType">
+      <genEnumLiterals ecoreEnumLiteral="BillOfResources.ecore#//FormatType/singleValue"/>
+      <genEnumLiterals ecoreEnumLiteral="BillOfResources.ecore#//FormatType/range"/>
+      <genEnumLiterals ecoreEnumLiteral="BillOfResources.ecore#//FormatType/enumeration"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="BillOfResources.ecore#//UnitType">
+      <genEnumLiterals ecoreEnumLiteral="BillOfResources.ecore#//UnitType/mm"/>
+      <genEnumLiterals ecoreEnumLiteral="BillOfResources.ecore#//UnitType/mS"/>
+      <genEnumLiterals ecoreEnumLiteral="BillOfResources.ecore#//UnitType/gr"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="BillOfResources.ecore#//AttributeTypeObject"/>
+    <genDataTypes ecoreDataType="BillOfResources.ecore#//FormatTypeObject"/>
+    <genDataTypes ecoreDataType="BillOfResources.ecore#//UnitTypeObject"/>
+    <genClasses ecoreClass="BillOfResources.ecore#//Attribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BillOfResources.ecore#//Attribute/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//Attribute/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//Attribute/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//Attribute/value"/>
+    </genClasses>
+    <genClasses ecoreClass="BillOfResources.ecore#//AttributeDescriptor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//AttributeDescriptor/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//AttributeDescriptor/format"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//AttributeDescriptor/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//AttributeDescriptor/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//AttributeDescriptor/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//AttributeDescriptor/unit"/>
+    </genClasses>
+    <genClasses ecoreClass="BillOfResources.ecore#//BoR">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BillOfResources.ecore#//BoR/resources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BillOfResources.ecore#//BoR/resourceDescriptions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BillOfResources.ecore#//BoR/resCategoryDescriptions"/>
+    </genClasses>
+    <genClasses ecoreClass="BillOfResources.ecore#//HazardDescriptor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//HazardDescriptor/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//HazardDescriptor/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//HazardDescriptor/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//HazardDescriptor/type"/>
+    </genClasses>
+    <genClasses ecoreClass="BillOfResources.ecore#//ResCategoryDescriptor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BillOfResources.ecore#//ResCategoryDescriptor/attributeDescriptors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BillOfResources.ecore#//ResCategoryDescriptor/hazardDescriptors"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//ResCategoryDescriptor/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//ResCategoryDescriptor/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//ResCategoryDescriptor/label"/>
+    </genClasses>
+    <genClasses ecoreClass="BillOfResources.ecore#//Resource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BillOfResources.ecore#//Resource/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BillOfResources.ecore#//Resource/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//Resource/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//Resource/label"/>
+    </genClasses>
+    <genClasses ecoreClass="BillOfResources.ecore#//ResourceDescriptor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BillOfResources.ecore#//ResourceDescriptor/resourceCategories"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BillOfResources.ecore#//ResourceDescriptor/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BillOfResources.ecore#//ResourceDescriptor/hazardDescriptors"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//ResourceDescriptor/cad"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//ResourceDescriptor/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//ResourceDescriptor/designelement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//ResourceDescriptor/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//ResourceDescriptor/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BillOfResources.ecore#//ResourceDescriptor/thumbnail"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

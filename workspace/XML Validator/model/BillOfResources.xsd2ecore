@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd2ecore:XSD2EcoreMappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsd2ecore="http://www.eclipse.org/emf/2002/XSD2Ecore" inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#/"
+    outputs="BoR.ecore#/" topToBottom="true">
+  <nested inputs="bundleentry://516.fwk1502616653/cache/www.w3.org/2001/XMLSchema.xsd#//string;XSDSimpleTypeDefinition=9"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//formatType;XSDSimpleTypeDefinition=1"
+      outputs="BoR.ecore#//FormatType">
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//formatType;XSDSimpleTypeDefinition=1/XSDEnumerationFacet"
+        outputs="BoR.ecore#//FormatType/singleValue"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//formatType;XSDSimpleTypeDefinition=1/XSDEnumerationFacet=1"
+        outputs="BoR.ecore#//FormatType/range"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//formatType;XSDSimpleTypeDefinition=1/XSDEnumerationFacet=2"
+        outputs="BoR.ecore#//FormatType/enumeration"/>
+  </nested>
+  <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//attributeType;XSDSimpleTypeDefinition=2"
+      outputs="BoR.ecore#//AttributeType">
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//attributeType;XSDSimpleTypeDefinition=2/XSDEnumerationFacet"
+        outputs="BoR.ecore#//AttributeType/decimal"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//attributeType;XSDSimpleTypeDefinition=2/XSDEnumerationFacet=1"
+        outputs="BoR.ecore#//AttributeType/string"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//attributeType;XSDSimpleTypeDefinition=2/XSDEnumerationFacet=2"
+        outputs="BoR.ecore#//AttributeType/integer"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//attributeType;XSDSimpleTypeDefinition=2/XSDEnumerationFacet=3"
+        outputs="BoR.ecore#//AttributeType/boolean"/>
+  </nested>
+  <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//unitType;XSDSimpleTypeDefinition"
+      outputs="BoR.ecore#//UnitType">
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//unitType;XSDSimpleTypeDefinition/XSDEnumerationFacet"
+        outputs="BoR.ecore#//UnitType/mm"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//unitType;XSDSimpleTypeDefinition/XSDEnumerationFacet=1"
+        outputs="BoR.ecore#//UnitType/mS"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//unitType;XSDSimpleTypeDefinition/XSDEnumerationFacet=2"
+        outputs="BoR.ecore#//UnitType/gr"/>
+  </nested>
+  <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//AttributeDescriptor;XSDComplexTypeDefinition"
+      outputs="BoR.ecore#//AttributeDescriptor">
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//AttributeDescriptor;XSDComplexTypeDefinition/XSDAttributeUse=2"
+        outputs="BoR.ecore#//AttributeDescriptor/description"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//AttributeDescriptor;XSDComplexTypeDefinition/XSDAttributeUse=4"
+        outputs="BoR.ecore#//AttributeDescriptor/format"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//AttributeDescriptor;XSDComplexTypeDefinition/XSDAttributeUse"
+        outputs="BoR.ecore#//AttributeDescriptor/id"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//AttributeDescriptor;XSDComplexTypeDefinition/XSDAttributeUse=1"
+        outputs="BoR.ecore#//AttributeDescriptor/label"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//AttributeDescriptor;XSDComplexTypeDefinition/XSDAttributeUse=5"
+        outputs="BoR.ecore#//AttributeDescriptor/type"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//AttributeDescriptor;XSDComplexTypeDefinition/XSDAttributeUse=3"
+        outputs="BoR.ecore#//AttributeDescriptor/unit"/>
+  </nested>
+  <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//Attribute;XSDComplexTypeDefinition=1"
+      outputs="BoR.ecore#//Attribute">
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//Attribute;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="BoR.ecore#//Attribute/description"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//Attribute;XSDComplexTypeDefinition=1/XSDAttributeUse"
+        outputs="BoR.ecore#//Attribute/id"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//Attribute;XSDComplexTypeDefinition=1/XSDAttributeUse=1"
+        outputs="BoR.ecore#//Attribute/label"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//Attribute;XSDComplexTypeDefinition=1/XSDAttributeUse=2"
+        outputs="BoR.ecore#//Attribute/value"/>
+  </nested>
+  <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//HazardDescriptor;XSDComplexTypeDefinition=2"
+      outputs="BoR.ecore#//HazardDescriptor">
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//HazardDescriptor;XSDComplexTypeDefinition=2/XSDAttributeUse=3"
+        outputs="BoR.ecore#//HazardDescriptor/description"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//HazardDescriptor;XSDComplexTypeDefinition=2/XSDAttributeUse"
+        outputs="BoR.ecore#//HazardDescriptor/id"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//HazardDescriptor;XSDComplexTypeDefinition=2/XSDAttributeUse=1"
+        outputs="BoR.ecore#//HazardDescriptor/label"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//HazardDescriptor;XSDComplexTypeDefinition=2/XSDAttributeUse=2"
+        outputs="BoR.ecore#//HazardDescriptor/type"/>
+  </nested>
+  <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResCategoryDescriptor;XSDComplexTypeDefinition=3"
+      outputs="BoR.ecore#//ResCategoryDescriptor">
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResCategoryDescriptor;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="BoR.ecore#//ResCategoryDescriptor/attributeDescriptors"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResCategoryDescriptor;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="BoR.ecore#//ResCategoryDescriptor/hazardDescriptors"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResCategoryDescriptor;XSDComplexTypeDefinition=3/XSDAttributeUse=2"
+        outputs="BoR.ecore#//ResCategoryDescriptor/description"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResCategoryDescriptor;XSDComplexTypeDefinition=3/XSDAttributeUse"
+        outputs="BoR.ecore#//ResCategoryDescriptor/id"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResCategoryDescriptor;XSDComplexTypeDefinition=3/XSDAttributeUse=1"
+        outputs="BoR.ecore#//ResCategoryDescriptor/label"/>
+  </nested>
+  <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResourceDescriptor;XSDComplexTypeDefinition=4"
+      outputs="BoR.ecore#//ResourceDescriptor">
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResourceDescriptor;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="BoR.ecore#//ResourceDescriptor/resourceCategories"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResourceDescriptor;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="BoR.ecore#//ResourceDescriptor/attributes"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResourceDescriptor;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="BoR.ecore#//ResourceDescriptor/hazardDescriptors"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResourceDescriptor;XSDComplexTypeDefinition=4/XSDAttributeUse=4"
+        outputs="BoR.ecore#//ResourceDescriptor/cad"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResourceDescriptor;XSDComplexTypeDefinition=4/XSDAttributeUse=2"
+        outputs="BoR.ecore#//ResourceDescriptor/description"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResourceDescriptor;XSDComplexTypeDefinition=4/XSDAttributeUse=5"
+        outputs="BoR.ecore#//ResourceDescriptor/designelement"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResourceDescriptor;XSDComplexTypeDefinition=4/XSDAttributeUse"
+        outputs="BoR.ecore#//ResourceDescriptor/id"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResourceDescriptor;XSDComplexTypeDefinition=4/XSDAttributeUse=1"
+        outputs="BoR.ecore#//ResourceDescriptor/label"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//ResourceDescriptor;XSDComplexTypeDefinition=4/XSDAttributeUse=3"
+        outputs="BoR.ecore#//ResourceDescriptor/thumbnail"/>
+  </nested>
+  <nested inputs="bundleentry://516.fwk1502616653/cache/www.w3.org/2001/XMLSchema.xsd#//anyType;XSDComplexTypeDefinition=28"
+      outputs="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//Resource;XSDComplexTypeDefinition=5"
+      outputs="BoR.ecore#//Resource">
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//Resource;XSDComplexTypeDefinition=5/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="BoR.ecore#//Resource/description"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//Resource;XSDComplexTypeDefinition=5/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="BoR.ecore#//Resource/position"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//Resource;XSDComplexTypeDefinition=5/XSDAttributeUse"
+        outputs="BoR.ecore#//Resource/id"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//Resource;XSDComplexTypeDefinition=5/XSDAttributeUse=1"
+        outputs="BoR.ecore#//Resource/label"/>
+  </nested>
+  <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//BoR;XSDComplexTypeDefinition=6"
+      outputs="BoR.ecore#//BoR">
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//BoR;XSDComplexTypeDefinition=6/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="BoR.ecore#//BoR/resources"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//BoR;XSDComplexTypeDefinition=6/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="BoR.ecore#//BoR/resourceDescriptions"/>
+    <nested inputs="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd#//BoR;XSDComplexTypeDefinition=6/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="BoR.ecore#//BoR/resCategoryDescriptions"/>
+  </nested>
+</xsd2ecore:XSD2EcoreMappingRoot>

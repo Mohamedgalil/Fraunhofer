@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated bor -->
+      <package
+            uri="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd"
+            class="liaa.ipa.xml.control.BillOfResources.BillOfResourcesPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated bor -->
+      <parser
+            type="billofresources"
+            class="liaa.ipa.xml.control.BillOfResources.util.BillOfResourcesResourceFactoryImpl"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated BillOfResources -->
+      <package
+            uri="file:/C:/Users/rfa-ms/Downloads/Documents/BoR.xsd"
+            class="liaa.ipa.xml.control.BillOfResources.borPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated BillOfResources -->
+      <parser
+            type="bor"
+            class="liaa.ipa.xml.control.BillOfResources.util.borResourceFactoryImpl"/>
+   </extension>
+</plugin>

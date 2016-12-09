@@ -1,0 +1,102 @@
+package liaa.dct.bor.gui.wizards;
+
+import org.eclipse.jface.wizard.WizardPage;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.FileDialog;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
+
+public class PageOne extends WizardPage {
+
+	private static final String LABEL_BOR = "BoR: ";
+
+	private static final String pageName = "Import Project Page 1";
+
+	private static final String LABEL_BOP = "BOP: ";
+
+	private static final String BUTTON_OPEN = "Open";
+
+	private static final String BUTTON_IMPORT = "Import";
+
+	private Button btnImport, btnBoR, btnBoP;
+	private Text txtBoR, txtBoP;
+
+	protected PageOne() {
+		super(pageName);
+		setDescription("Import BoR File");
+		setMessage("Please press import to select BoR and BoP");
+	}
+
+	@Override
+	public void createControl(Composite parent) {
+		Composite container = new Composite(parent, SWT.NONE);
+		container.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+		GridLayout layout = new GridLayout(2, false);
+		container.setLayout(layout);
+		setControl(container);
+
+		// ----Set Import Button
+		btnImport = new Button(container, SWT.PUSH);
+		btnImport.setLayoutData(new GridData(3, 1, true, false));
+		btnImport.addSelectionListener(btnListener);
+		btnImport.setText(BUTTON_IMPORT);
+
+		// ----Set Text Fields
+
+		new Label(container, SWT.NONE).setText(LABEL_BOR);
+		txtBoR = new Text(container, SWT.NONE);
+		txtBoR.setLayoutData(new GridData(1, 1, true, false));
+		btnBoR = new Button(container, SWT.PUSH);
+		btnBoR.addSelectionListener(btnListener);
+		btnBoR.setText(BUTTON_OPEN);
+
+		new Label(container, SWT.NONE).setText(LABEL_BOP);
+		txtBoP = new Text(container, SWT.NONE);
+		txtBoP.setLayoutData(new GridData(1, 1, true, false));
+		btnBoP = new Button(container, SWT.PUSH);
+		btnBoP.addSelectionListener(btnListener);
+		btnBoP.setText(BUTTON_OPEN);
+
+	}
+
+	private SelectionListener btnListener = new SelectionListener() {
+		@Override
+		public void widgetSelected(SelectionEvent e) {
+			handleEvent(e);
+
+		}
+
+		@Override
+		public void widgetDefaultSelected(SelectionEvent e) {
+		}
+	};
+
+	public void handleEvent(SelectionEvent e) {
+		if (e.widget == btnImport) {
+		}
+		if (e.widget == btnBoR) {
+			setErrorMessage("BoR Button Pressed");
+		}
+		if (e.widget == btnBoP) {
+			setErrorMessage("BoP Button Pressed");
+		}
+	}
+	public void createFileDialog(){
+		FileDialog fileDialog = new FileDialog(new Shell());
+         fileDialog.setText("Select Files");
+         fileDialog.setFilterExtensions(new String[] { "*.xml" });
+         fileDialog.setFilterNames(new String[] { "Textfiles(*.txt)" });
+         // Open Dialog and save result of selection
+         String selected = fileDialog.open();
+         System.out.println(selected);
+
+	}
+}

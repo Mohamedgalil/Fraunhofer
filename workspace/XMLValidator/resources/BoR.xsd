@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by will (Universität Karlsruhe Institut für Rechneranwendungen in Planung und Konstruktion) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="AttributeDescriptor">
+		<xs:attribute name="id" type="xs:string" use="required"/>
+		<xs:attribute name="label" type="xs:string" use="required"/>
+		<xs:attribute name="description" type="xs:string" use="required"/>
+		<xs:attribute name="unit" type="unitType" use="required"/>
+		<xs:attribute name="format" type="formatType" use="required"/>
+		<xs:attribute name="type" type="attributeType" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="Attribute">
+		<xs:sequence>
+			<xs:element name="Description" type="AttributeDescriptor"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+		<xs:attribute name="label" type="xs:string" use="required"/>
+		<xs:attribute name="value" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:simpleType name="unitType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="mm"/>
+			<xs:enumeration value="m/s"/>
+			<xs:enumeration value="gr"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="formatType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="singleValue"/>
+			<xs:enumeration value="range"/>
+			<xs:enumeration value="enumeration"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="attributeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="decimal"/>
+			<xs:enumeration value="string"/>
+			<xs:enumeration value="integer"/>
+			<xs:enumeration value="boolean"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="HazardDescriptor">
+		<xs:attribute name="id" type="xs:string" use="required"/>
+		<xs:attribute name="label" type="xs:string" use="required"/>
+		<xs:attribute name="type" type="xs:string" use="required"/>
+		<xs:attribute name="description" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="ResCategoryDescriptor">
+		<xs:sequence>
+			<xs:element name="AttributeDescriptors" type="AttributeDescriptor" maxOccurs="unbounded"/>
+			<xs:element name="HazardDescriptors" type="HazardDescriptor" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+		<xs:attribute name="label" type="xs:string" use="required"/>
+		<xs:attribute name="description" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="ResourceDescriptor">
+		<xs:sequence>
+			<xs:element name="ResourceCategories" type="ResCategoryDescriptor" maxOccurs="unbounded"/>
+			<xs:element name="Attributes" type="Attribute" maxOccurs="unbounded"/>
+			<xs:element name="HazardDescriptors" type="HazardDescriptor" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+		<xs:attribute name="label" type="xs:string" use="required"/>
+		<xs:attribute name="description" type="xs:string" use="required"/>
+		<xs:attribute name="thumbnail" type="xs:string" use="required"/>
+		<xs:attribute name="cad" type="xs:string" use="required"/>
+		<xs:attribute name="designelement" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="Resource">
+		<xs:sequence>
+			<xs:element name="Description" type="ResourceDescriptor"/>
+			<xs:element name="Position"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+		<xs:attribute name="label" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="BoR">
+		<xs:sequence>
+			<xs:element name="Resources" type="Resource"/>
+			<xs:element name="ResourceDescriptions" type="ResourceDescriptor"/>
+			<xs:element name="ResCategoryDescriptions" type="ResCategoryDescriptor"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
